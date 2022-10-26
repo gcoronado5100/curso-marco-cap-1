@@ -14,8 +14,9 @@
 
 :root {
     --color-primary: #445964;
-    --color-primay-alt: #165378;
+    --color-primay-alt: #263138;
     --color-bg: #FBFBFB;
+    --color-black : #000;
 
     --container-lg: 70%;
     --container-md: 85%;
@@ -101,7 +102,9 @@ a:hover {
     font-size: 1.25rem;
 }
 
-/* Main */
+/* content edit */
+
+/* HOME SETTINGS */
 
 .home__container {
     display: grid;
@@ -121,6 +124,73 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* RESUMEN SETTINGS */
+
+.resumen__header {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    align-items: center;
+    text-align: right;
+}
+
+.resumen__header span {
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.resumen__header h2 {
+    font-size: 3rem;
+    color: var(--color-black);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.resumen__header h2 b {
+    color: var(--color-primary);
+}
+
+.resumen-cargo__container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.resumen-cargo__container .resumen-card {
+    background: var(--color-primay-alt);
+    padding: 2rem;
+    border-radius: 20px;
+    color: var(--color-bg);
+    display: grid;
+    gap:5px;
+    text-align: center;
+    margin: 1rem 0 0;
+}
+
+.resumen-cargo__container .resumen-card:nth-child(even){
+    background: var(--color-primary);
+}
+
+.resumen-cargo__container .resumen-card:nth-child(3n-1) {
+    margin: 0 0 1rem;
+}
+
+.resumen-cargo__container .resumen-card .card-title {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+}
+
+.resumen-cargo__container .resumen-card:nth-child(even) .card-title {
+    color: var(--color-primay-alt);
+}
+
+.resumen-cargo__container .resumen-card .position {
+    font-weight: 400;
+    font-size: 1.25rem;
+    font-style: italic;
 }
 
 /* Footer */
