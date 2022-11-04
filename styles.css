@@ -193,6 +193,21 @@ a:hover {
     font-style: italic;
 }
 
+/* Testimonials*/
+
+.testimonial__card {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    width: 300px;
+    text-align: center;
+}
+
+.testimonial__card h3 {
+    font-size: 3rem;
+}
+
 /* Footer */
 
 footer {
