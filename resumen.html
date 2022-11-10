@@ -9,6 +9,9 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"  />
     <link rel="stylesheet" href="./styles.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -59,14 +62,27 @@
     </section>
 
     <section>
-        <div class="container testimonials__container">
-            <div class="testimonial__card">
-                <h3><i class="fa-sharp fa-solid fa-quote-right"></i></h3>
-                <p>“Aprender é a unica coisa que a mente não se cansa, nunca tem medo e nunca se arrepende”</p>
-                <h4>Gabriel Coronado</h4>
+        <div class="container testimonials_container">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <!-- <div class="swiper-slide">Slide 1</div> -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
             </div>
         </div>
+
     </section>
+
 
     <!-- Footer -->
     <footer>
@@ -82,8 +98,30 @@
         </div>
     </footer>
     <!-- End Footer-->
+    <!-- Scripts de externos AKA => Dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+    <!-- Nuestros SCRIPTS -->
     <script src="./app.js"></script>
     <script src="./testimonials.js"></script>
+    <script>
+        const swiper = new Swiper(".swiper", {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            autoplay: {
+                delay: 1000,
+            },
+            loop: true
+        });
+    </script>
     </body>
     </html>
